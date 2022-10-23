@@ -41,7 +41,10 @@ fn content(slug: String) -> Template {
     Template::render(
         "content",
         context! {
-            post: post,
+            slug: post.slug.clone(),
+            title: post.title.clone(),
+            body: post.render(),
+            date: post.date.clone(),
         },
     )
 }

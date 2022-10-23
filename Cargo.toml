@@ -12,3 +12,4 @@ diesel = { version = "2.0.0", features = ["sqlite", "r2d2"] }
 diesel_migrations = "2.0.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_yaml = "0.8"
+mini_markdown = "0.3.2"

@@ -1,0 +1,34 @@
+title: "Dru's Blog"
+description: "A blog about stuff"
+default: about-me
+posts:
+  - slug: about-me
+    title: "About Me"
+    date: 2022-10-23
+    body: >
+      Hello.  My name is Dru Jensen.  I am an old priviledged wealthy straight racist sexist phobic christian libertarian white male with a career in software development.
+      I fit all the stereotypes you would expect for my demographic. I am a strong advocate of the traditional family unit 
+      but will defend the rights of anyone that doesn't hold my views. 
+      I do not use special pronouns and only acknowledge 2 genders but will use pronouns of others out of respect for their beliefs.
+      I believe all humans are racist, sexist and phobic because its human nature to feel more comfortable and have more empathy for people like yourself.
+      However, I believe we should do our best to show love and empathy for others not like us as Christ commanded us to do.
+      I own a nice home close to the beach and drive a Tesla. I'm in the process of buying a Rivian R1T.
+      I live in Huntington Beach, CA. USA with my wife Lehang Ngo, 2 children; Katrina and Sean and our dog Freckles.
+      My hobbies are learning new programming languages, electronics, robotics, AI, IoT, 8-bit breadboard computers, fishing, camping,
+      and watching American football on the weekends. My heros are Jesus Christ, Elon Musk, Steve Wozniak,
+      Bill Gates, Nikola Tesla and John Elway.
+  - slug: expected-404s
+    title: "404's should not be expected behavior"
+    date: 2022-10-24
+    body: >
+      Any http response in the 400 range is considered an error including 404's. A 404 response should not be expected behavior.
+      If you are expecting a 404 response from an api endpoint, then you are doing something wrong. More than likely, you are improperly
+      using the endpoint as a search endpoint instead of a lookup endpoint.  A search endpoint should return a 200 response with an empty
+      result set if no results are found.  A lookup endpoint should return a 404 response if no results are found.
+      Here is the difference:
+      ``
+      GET /api/users?id={id} // search endpoint returns 200 with empty result set if user not found
+      ``
+      ``
+      GET /api/users/{id} // lookup endpoint returns 404 if user not found
+      ``
