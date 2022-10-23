@@ -1,11 +1,17 @@
-FROM --platform=$BUILDPLATFORM rust:1.61.0 as builder
+FROM rust:1.61.0 as builder
 WORKDIR /app
-ADD . /app
-RUN cargo clean
+ADD Cargo.* /app
+ADD Rocket.toml /app
+Run cargo deps
+ADD src /app/src
 RUN cargo build --release
- 
-FROM --platform=$TARGETPLATFORM ubuntu:22.10
+ADD static /app/static
+ADD templates /app/templates
+ADD config /app/config
+
+FROM ubuntu:22.04
 WORKDIR /app
+RUN apt-get update && apt-get install -y wget curl git file
 RUN mkdir /app/config
 RUN mkdir /app/templates
 RUN mkdir /app/static

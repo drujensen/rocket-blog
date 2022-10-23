@@ -3,20 +3,36 @@ description: "A blog about stuff"
 default: about-me
 posts:
   - slug: about-me
-    title: "About Me"
+    title: "Rust is hard"
     date: 2022-10-23
     body: >
-      Hello.  My name is Dru Jensen.  I am an old priviledged wealthy straight racist sexist phobic christian libertarian white male with a career in software development.
-      I fit all the stereotypes you would expect for my demographic. I am a strong advocate of the traditional family unit 
-      but will defend the rights of anyone that doesn't hold my views. 
-      I do not use special pronouns and only acknowledge 2 genders but will use pronouns of others out of respect for their beliefs.
-      I believe all humans are racist, sexist and phobic because its human nature to feel more comfortable and have more empathy for people like yourself.
-      However, I believe we should do our best to show love and empathy for others not like us as Christ commanded us to do.
-      I own a nice home close to the beach and drive a Tesla. I'm in the process of buying a Rivian R1T.
-      I live in Huntington Beach, CA. USA with my wife Lehang Ngo, 2 children; Katrina and Sean and our dog Freckles.
-      My hobbies are learning new programming languages, electronics, robotics, AI, IoT, 8-bit breadboard computers, fishing, camping,
-      and watching American football on the weekends. My heros are Jesus Christ, Elon Musk, Steve Wozniak,
-      Bill Gates, Nikola Tesla and John Elway.
+      I've been trying to learn Rust for a while now, but I just can't get it.
+      I've tried reading the book, but it's just so dry. I've tried watching
+      videos, but they're all so long. I've tried reading blog posts, but they
+      all seem to be written by people who already know Rust. I've tried
+      reading the source code, but it's just so hard to understand. I've tried
+      reading the RFCs, but they're all so long. I've tried reading the
+      documentation, but it's just so hard to understand. I've tried reading
+      the book again, but it's just so dry. I've tried watching videos again,
+      but they're all so long. I've tried reading blog posts again, but they
+      all seem to be written by people who already know Rust. I've tried
+      reading the source code again, but it's just so hard to understand. I've
+      tried reading the RFCs again, but they're all so long. I've tried reading
+      the documentation again, but it's just so hard to understand. I've tried
+      reading the book again, but it's just so dry. I've tried watching videos
+      again, but they're all so long. I've tried reading blog posts again, but
+      they all seem to be written by people who already know Rust. I've tried
+      reading the source code again, but it's just so hard to understand. I've
+      tried reading the RFCs again, but they're all so long. I've tried reading
+      the documentation again, but it's just so hard to understand. I've tried
+      reading the book again, but it's just so dry. I've tried watching videos
+      again, but they're all so long. I've tried reading blog posts again, but
+      they all seem to be written by people who already know Rust. I've tried
+      reading the source code again, but it's just so hard to understand. I've
+      tried reading the RFCs again, but they're all so long. I've tried reading
+      the documentation again, but it's just so hard to understand. I've tried
+      reading the book again, but it's just so dry. I've tried watching videos
+      again, but they're all
   - slug: expected-404s
     title: "404's should not be expected behavior"
     date: 2022-10-24
