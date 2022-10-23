@@ -1,10 +1,10 @@
-FROM rust:1.61.0 as builder
+FROM --platform=$BUILDPLATFORM rust:1.61.0 as builder
 WORKDIR /app
 ADD . /app
+RUN cargo clean
 RUN cargo build --release
  
-# Prod stage
-FROM ubuntu:22.10
+FROM --platform=$TARGETPLATFORM ubuntu:22.10
 WORKDIR /app
 RUN mkdir /app/static
 RUN mkdir /app/static/styles

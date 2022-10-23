@@ -1,15 +1,47 @@
 #[macro_use]
 extern crate rocket;
 
-use rocket::fs::{FileServer, relative};
-use rocket_dyn_templates::{Template, context};
+use rocket::fs::{relative, FileServer};
+use rocket_dyn_templates::{context, Template};
+
+mod config;
 
 #[get("/")]
 fn index() -> Template {
-    Template::render("index", context! { 
-        title: "When should I choose server side rendering?", 
-        body: "I have noticed that minimalistic websites has disappeared.  This is sad."
-    })
+    let config = config::Config::new();
+    Template::render(
+        "index",
+        context! {
+            title: config.title,
+            description: config.description,
+            posts: config.posts,
+            default: config.default,
+        },
+    )
+}
+
+#[get("/<current>")]
+fn current(current: String) -> Template {
+    let config = config::Config::new();
+    Template::render(
+        "index",
+        context! {
+            posts: config.posts,
+            current: current,
+        },
+    )
+}
+
+#[get("/<slug>")]
+fn content(slug: String) -> Template {
+    let config = config::Config::new();
+    let post = config.posts.iter().find(|post| post.slug == slug).unwrap();
+    Template::render(
+        "content",
+        context! {
+            post: post,
+        },
+    )
 }
 
 #[launch]
@@ -17,5 +49,6 @@ fn rocket() -> _ {
     rocket::build()
         .attach(Template::fairing())
         .mount("/", FileServer::from(relative!("static")))
-        .mount("/", routes![index])
+        .mount("/", routes![index, current])
+        .mount("/content", routes![content])
 }

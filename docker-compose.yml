@@ -3,7 +3,7 @@ x-aws-vpc: vpc-16bb5172
 services:
   app:
     build: .
-    image: rocket-blog
+    image: drujensen/rocket-blog:latest
     command: /app/rocket-blog
     environment:
       - ROCKET_ADDRESS=0.0.0.0

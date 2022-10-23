@@ -1,0 +1,22 @@
+title: "Dru's Blog"
+description: "A blog about stuff"
+default: about-me
+posts:
+  - slug: about-me
+    title: "About Me"
+    date: 2022-10-23
+    body: >
+      Hello.  My name is Dru Jensen.  I am an old white priviledged straight male christian with a career in software development.
+      I live in Huntington Beach, CA. USA with my wife Lehang Ngo and 2 children; Katrina and Sean.  My hobbies are
+      learning new programming languages, electronics, robotics, AI, IoT, 8-bit breadboard computers, fishing, camping,
+      and watching American football on the weekends.
+  - slug: my-first-post
+    title: "My first post"
+    date: 2019-01-01
+    body: >
+      This is my first post
+  - slug: my-second-post
+    title: "My second post"
+    date: 2019-01-01
+    body: >
+      This is my second post
