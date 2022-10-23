@@ -15,7 +15,7 @@ fn index() -> Template {
             title: config.title,
             description: config.description,
             posts: config.posts,
-            default: config.default,
+            current: config.default,
         },
     )
 }
@@ -26,6 +26,8 @@ fn current(current: String) -> Template {
     Template::render(
         "index",
         context! {
+            title: config.title,
+            description: config.description,
             posts: config.posts,
             current: current,
         },
