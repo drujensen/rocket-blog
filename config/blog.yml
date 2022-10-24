@@ -4,6 +4,7 @@ default: about-me
 posts:
   - slug: about-me
     title: "Rust is hard"
+    author: Github Copilot
     date: 2022-10-23
     body: >
       I've been trying to learn Rust for a while now, but I just can't get it.
@@ -35,6 +36,7 @@ posts:
       again, but they're all
   - slug: expected-404s
     title: "404's should not be expected behavior"
+    author: Dru Jensen
     date: 2022-10-24
     body: >
       Any http response in the 400 range is considered an error including 404's. A 404 response should not be expected behavior.

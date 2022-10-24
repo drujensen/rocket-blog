@@ -8,8 +8,9 @@ use std::fs::File;
 pub struct Post {
     pub slug: String,
     pub title: String,
-    pub body: String,
+    pub author: String,
     pub date: String,
+    pub body: String,
 }
 
 impl Post {

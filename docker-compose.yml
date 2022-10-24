@@ -1,5 +1,13 @@
 version: '3.8'
 x-aws-vpc: vpc-16bb5172
+x-aws-cloudformation:
+  Resources:
+    AppTaskDefinition:
+      Properties:
+        RuntimePlatform:
+          CpuArchitecture: ARM64
+          OperatingSystemFamily: LINUX
+
 services:
   app:
     build: .

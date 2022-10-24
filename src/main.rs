@@ -43,8 +43,9 @@ fn content(slug: String) -> Template {
         context! {
             slug: post.slug.clone(),
             title: post.title.clone(),
-            body: post.render(),
+            author: post.author.clone(),
             date: post.date.clone(),
+            body: post.render(),
         },
     )
 }

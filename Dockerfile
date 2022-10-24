@@ -2,7 +2,6 @@ FROM rust:1.61.0 as builder
 WORKDIR /app
 ADD Cargo.* /app
 ADD Rocket.toml /app
-Run cargo deps
 ADD src /app/src
 RUN cargo build --release
 ADD static /app/static
