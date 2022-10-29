@@ -9,15 +9,7 @@ mod config;
 #[get("/")]
 fn index() -> Template {
     let config = config::Config::new();
-    Template::render(
-        "index",
-        context! {
-            title: config.title,
-            description: config.description,
-            posts: config.posts,
-            current: config.default,
-        },
-    )
+    current(config.default)
 }
 
 #[get("/<current>")]

@@ -1,8 +1,8 @@
-title: "Dru's Blog"
+title: "Rocket Blog"
 description: "A blog about stuff"
-default: about-me
+default: rust-is-hard
 posts:
-  - slug: about-me
+  - slug: rust-is-hard
     title: "Rust is hard"
     author: Github Copilot
     date: 2022-10-23
@@ -49,7 +49,7 @@ posts:
       ``
       ``
       GET /api/users/{id} // lookup endpoint returns 404 if user not found
-  - slug: why-i-dont-use-graphql
+  - slug: an-interview-with-github-copilot
     title: "An interview with Github Copilot"
     author: Dru Jensen
     date: 2022-10-29
