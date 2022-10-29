@@ -46,22 +46,25 @@ posts:
       and the ability to monitor the health of your API.  The problem is that 404's
       will create noise in your monitoring system if they are not properly used.
 
+
       The original intent of the 404 status code was to indicate that the resource was
       not found and should be considered an error.  This was in the days where you had static
       web pages and an index page where it would link to other pages on the site.  If the index page
       had a link to a page that did not exist, then the user would get a 404 error.  This was a good
       thing because it would indicate that the link was broken and needed to be fixed.
 
+
       When building a REST compliant API, the 404 status code is used to indicate the resource pointed to
-      by the URL is not found.  Where the problem comes in is that a client might consider using this endpoitn
+      by the URL is not found.  Where the problem comes in is that a client might consider using this endpoint
       to check if the resource exists or not.  This is a bad idea because it will create noise in your monitoring.
+
 
       If you are calling an endpoint and a 404 is expected behavior, then you are not using the API correctly.
 
       ## The Solution
       
       The solution is to provide a search endpoint similar to the index.html.  This endpoint will always return a list 
-      and a status of 200.  This endpoint should can provide a query or filter mechanism to find specific resources.
+      and a status of 200 success.  This endpoint should can provide a query or filter mechanism to find specific resources.
       Anything that matches the pattern provided by the client should be returned in an array.  If nothing matches, then
       an empty array should be returned.  This will allow the client to check if the resource exists or not without
       creating noise in your monitoring system.
