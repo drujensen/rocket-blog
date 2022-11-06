@@ -4,9 +4,6 @@ services:
   app:
     build:
       context: .
-      platforms:
-        - linux/amd64
-        - linux/arm64
     image: drujensen/rocket-blog:latest
     platform: linux/arm64
     command: /app/rocket-blog
