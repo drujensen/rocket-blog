@@ -14,6 +14,6 @@ $ cargo run
 
 ```
 docker buildx create --use --name multiplatform
-docker buildx build --platform linux/amd64,linux/arm64 --push -t drujensen/rocket-blog:latest .
+docker buildx build --platform linux/amd64,linux/arm64,linux/riscv64 --push -t drujensen/rocket-blog:latest .
 ```
 

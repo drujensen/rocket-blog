@@ -26,7 +26,7 @@ fn current(current: String) -> Template {
     )
 }
 
-#[get("/<slug>")]
+#[get("/content/<slug>")]
 fn content(slug: String) -> Template {
     let config = config::Config::new();
     let post = config.posts.iter().find(|post| post.slug == slug).unwrap();
@@ -47,6 +47,5 @@ fn rocket() -> _ {
     rocket::build()
         .attach(Template::fairing())
         .mount("/", FileServer::from(relative!("static")))
-        .mount("/", routes![index, current])
-        .mount("/content", routes![content])
+        .mount("/", routes![index, current, content])
 }

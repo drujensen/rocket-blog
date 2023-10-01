@@ -7,7 +7,7 @@ COPY docker/platform.sh .
 RUN ./platform.sh # should write /.platform and /.compiler
 RUN rustup component add rustfmt
 RUN rustup target add $(cat /.platform)
-RUN apt-get update && apt-get install -y unzip $(cat /.compiler)
+RUN apt-get update && apt-get install -y $(cat /.compiler)
 
 # Build
 COPY Cargo.toml .
@@ -23,7 +23,7 @@ COPY templates templates
 COPY config config
 
 # Stage 2: Copy binary
-FROM debian:stable-slim
+FROM debian:sid-slim
 WORKDIR /app
 RUN apt-get update && apt-get install -y wget curl git file
 

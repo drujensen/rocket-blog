@@ -13,9 +13,9 @@ case $TARGETARCH in
     echo "gcc-aarch64-linux-gnu" > /.compiler
     echo "aarch64-linux-gnu-gcc" > /.linker
     ;;
-  "arm")
-    echo "armv7-unknown-linux-gnueabihf" > /.platform
-    echo "gcc-arm-linux-gnueabihf" > /.compiler
-    echo "arm-linux-gnueabihf-gcc" > /.linker
+  "riscv64")
+    echo "riscv64gc-unknown-linux-gnu" > /.platform
+    echo "gcc-riscv64-linux-gnu" > /.compiler
+    echo "riscv64-linux-gnu-gcc" > /.linker
     ;;
 esac
